@@ -9,7 +9,7 @@ export default async function ConfiguracoesPage() {
   const config = await lerConfiguracoes(await createClient());
   return (
     <>
-      <TituloAdmin titulo="Configurações" descricao="Textos e contatos da sua área. Logo e cores ficam no código (veja INSTALACAO.md, passo 8)." />
+      <TituloAdmin titulo="Configurações" descricao="Textos e contatos da sua área. Logo, cores e páginas novas você muda pedindo ao Claude ou ao GPT (INSTALACAO.md, passo 6)." />
       <ConfiguracoesForm inicial={config} />
     </>
   );
