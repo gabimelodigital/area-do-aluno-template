@@ -23,7 +23,7 @@ No fim, seus alunos compram na Guru, recebem pelo SIV o link + e-mail + senha, e
 
 | Chave | O que colocar |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → **Project Settings** → **Data API** → **URL** |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → botão verde **Connect** (no topo) → **Project URL**. Só até o `.supabase.co`, ex.: `https://abcd1234.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → **API Keys** → **Publishable key** (`sb_publishable_...`) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → **API Keys** → **Secret keys** (`sb_secret_...`, clique no olho para revelar). Se não houver, **Create new secret key**. Nunca mostre a ninguém. |
 | `EMAIL_DONO` | seu e-mail (você vai entrar na área com ele) |

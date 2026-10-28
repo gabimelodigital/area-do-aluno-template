@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { urlSupabase } from "./url";
 
 // Rotas abertas: login, links de e-mail do Supabase e o assistente de instalação.
 const PUBLICAS = ["/login", "/auth", "/instalar"];
@@ -17,7 +18,7 @@ function copiarCookies(de: NextResponse, para: NextResponse) {
 }
 
 export async function updateSession(request: NextRequest) {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const url = urlSupabase();
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !anonKey) throw new Error("Variáveis NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_ANON_KEY não definidas.");
 
