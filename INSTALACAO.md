@@ -12,7 +12,7 @@ No fim, seus alunos compram na Guru, recebem pelo SIV o link + e-mail + senha, e
 2. Dê um nome, crie uma senha para o banco (guarde num gerenciador de senhas) e em **Region** escolha **South America (São Paulo)**.
 3. Em **Security**: deixe **Enable Data API** e **Enable automatic RLS** marcados e **desmarque** **Automatically expose new tables**.
 4. Clique em **Create new project** e espere ficar pronto.
-5. Deixe aberta a tela **Project Settings** → **API Keys**: no passo 2 você vai copiar dela a **URL do projeto**, a chave **anon / publishable** e a chave **service_role / secret**.
+5. Deixe aberta a tela **Project Settings** → **API Keys**: no passo 2 você vai copiar dela a **URL do projeto**, a **Publishable key** (começa com `sb_publishable_`) e a **Secret key** (começa com `sb_secret_`). Use a aba **API Keys**, não a **Legacy API Keys**: as chaves antigas parecem iguais e confundem.
 
 ## Passo 2. Coloque a área no ar (Vercel)
 
@@ -23,9 +23,9 @@ No fim, seus alunos compram na Guru, recebem pelo SIV o link + e-mail + senha, e
 
 | Chave | O que colocar |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → **URL do projeto** |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → chave **anon** ou **publishable** |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → chave **service_role** ou **secret** (clique em **Reveal**). Nunca mostre a ninguém. |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → **Project Settings** → **Data API** → **URL** |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → **API Keys** → **Publishable key** (`sb_publishable_...`) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → **API Keys** → **Secret keys** (`sb_secret_...`, clique no olho para revelar). Se não houver, **Create new secret key**. Nunca mostre a ninguém. |
 | `EMAIL_DONO` | seu e-mail (você vai entrar na área com ele) |
 | `SENHA_PADRAO_ALUNO` | uma senha que você inventa, mínimo 8 caracteres. É a sua senha inicial e a de todo aluno novo. |
 

@@ -9,7 +9,7 @@ Cada instalação atende **uma** marca (single tenant), com quantos alunos quise
 1. Crie o projeto no Supabase (passo 1 do [INSTALACAO.md](INSTALACAO.md)).
 2. Clique no botão e preencha as chaves:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgabimelodigital%2Farea-do-aluno-template&project-name=area-do-aluno&repository-name=area-do-aluno&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,SUPABASE_SERVICE_ROLE_KEY,EMAIL_DONO,SENHA_PADRAO_ALUNO&envDescription=Supabase+%28URL,+anon+e+service_role+em+Project+Settings+%3E+API+Keys%29,+seu+e-mail+de+dono+e+a+senha+padr%C3%A3o+dos+alunos+%28m%C3%ADn.+8+caracteres%29.&envLink=https%3A%2F%2Fgithub.com%2Fgabimelodigital%2Farea-do-aluno-template%2Fblob%2Fmain%2FINSTALACAO.md)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgabimelodigital%2Farea-do-aluno-template&project-name=area-do-aluno&repository-name=area-do-aluno&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,SUPABASE_SERVICE_ROLE_KEY,EMAIL_DONO,SENHA_PADRAO_ALUNO&envDescription=Supabase+%28URL+em+Data+API;+Publishable+key+e+Secret+key+em+API+Keys%29,+seu+e-mail+de+dono+e+a+senha+padr%C3%A3o+dos+alunos+%28m%C3%ADn.+8+caracteres%29.&envLink=https%3A%2F%2Fgithub.com%2Fgabimelodigital%2Farea-do-aluno-template%2Fblob%2Fmain%2FINSTALACAO.md)
 
 3. Abra `https://SEU-SITE/instalar` e siga a tela.
 
@@ -31,8 +31,8 @@ Next.js 16 (App Router) · React 19 · Supabase (Auth, Postgres, Storage) · Tai
 | Variável | Onde | Para quê |
 |---|---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | pública | URL do projeto Supabase |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | pública | chave anon/publishable do Supabase |
-| `SUPABASE_SERVICE_ROLE_KEY` | **secreta** | webhook da Guru e criação de alunos |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | pública | Publishable key do Supabase (`sb_publishable_`) |
+| `SUPABASE_SERVICE_ROLE_KEY` | **secreta** (Secret key `sb_secret_`) | webhook da Guru e criação de alunos |
 | `GURU_API_TOKEN` | **secreta** | valida que o webhook veio da sua conta Guru |
 | `EMAIL_DONO` | servidor | e-mail do dono; /instalar cria a conta admin com ele |
 | `SENHA_PADRAO_ALUNO` | **secreta** | senha de todo aluno novo e senha inicial do dono (mín. 8 caracteres) |
